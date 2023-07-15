@@ -1,0 +1,40 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  background-color: #000;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  color: #FFF;
+}
+
+.navbar div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar div h1 span {
+  color: #FF69B4;
+}
+
+.navbar div ul {
+  width: 50%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.1em;
+  float: right;
+}
+
+.navbar div ul li{
+  transition: all .5s ease-in-out;
+}
+
+.navbar div ul li:hover{
+  cursor: pointer;
+  color: #FF69B4;
+}

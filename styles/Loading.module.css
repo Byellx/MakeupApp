@@ -1,0 +1,14 @@
+.loadingPage{
+    height: 30vh;
+    width: 30vh;
+    border-radius: 50%;
+    border: 10px solid #000;
+    border-left-color: #FF69B4;
+    animation: loading 1.2s linear infinite;
+}
+
+@keyframes loading{
+    to{
+        transform: rotate(360deg);
+    }
+}
