@@ -12,7 +12,18 @@
   transition: all 1s ease-in-out;
 }
 
-.cardContainer:hover{
+.cardContainerBack{
+  margin: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  height: 30em;
+  width: 20em;
+  border-radius: 1em;
+  text-transform: capitalize;
+  background-color: #FFF;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
   transform: rotateY(180deg);
 }
 
@@ -125,6 +136,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #000;
 }
 
 .cardFooter div a{
@@ -135,6 +147,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all .5s ease-in-out;
 }
 
 .cardFooter button:hover{
@@ -145,8 +158,16 @@
 }
 
 .cardFooter div:hover{
-  background-color: #FFF;
-  color: #FF69B4;
+  background-color: #000;
   border-color: #FF69B4;
   cursor: pointer;
+  color: #FF69B4;
+}
+
+.cardFooter div:hover a{
+  color:#FF69B4;
+}
+
+.cardFooter div a:hover{
+  color: #ffc0cb;
 }

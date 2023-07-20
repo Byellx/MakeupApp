@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react"
+import Link from "next/link"
 import styles from "../styles/Navbar.module.css"
 
 class Navbar extends Component {
@@ -13,9 +14,9 @@ class Navbar extends Component {
           </div>
           <div>
             <ul>
-              <li>Home</li>
-              <li>Products</li>
-              <li>About</li>
+              <li><Link href="./" legacyBehavior><a className={styles.link}>Home</a></Link></li>
+              <li><Link href="./products" legacyBehavior><a className={styles.link}>Produtos</a></Link></li>
+              <li><Link href="./about" legacyBehavior><a className={styles.link}>Sobre</a></Link></li>
             </ul>
           </div>
         </nav>

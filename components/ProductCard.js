@@ -2,12 +2,20 @@ import React, { Component, Fragment } from "react"
 import styles from "../styles/ProductCard.module.css"
 
 class ProductCard extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      active: true,
+    }
+  }
+
   render() {
     const { product } = this.props
+    const active = this.state.active
 
     return (
       <Fragment>
-        <div className={styles.cardContainer}>
+        <div className={active?styles.cardContainer:styles.cardContainerBack}>
           <div className={styles.front}>
             <header className={styles.cardHeader}>{product.name}</header>
             
@@ -23,7 +31,7 @@ class ProductCard extends Component {
             </main>
           
             <footer className={styles.cardFooter}>
-              <button>Detalhes</button>
+              <button onClick={()=> this.setState({active: false})}>Detalhes</button>
             </footer>
           </div>
 
@@ -44,9 +52,11 @@ class ProductCard extends Component {
             
               <footer className={styles.cardFooter}>
                 <div>
-                  <a href={product.product_link}>Ver produto</a>
+                  <a href={product.product_link}>Ver Produto</a>
+                  |
                   <a href={product.website_link}>Website</a>
                 </div>
+                <button onClick={()=> this.setState({active: !active})}>Voltar</button>
               </footer>
           </div>
       </div>

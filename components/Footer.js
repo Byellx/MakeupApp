@@ -5,7 +5,9 @@ class Footer extends Component {
   render() {
     return (
       <Fragment>
-        <footer className={styles.footer}>MakeUp &copy; 2023</footer>
+        <footer className={styles.footer}>
+          Todos os direitos reservados &copy; {new Date().getFullYear()}
+        </footer>
       </Fragment>
     )
   }
